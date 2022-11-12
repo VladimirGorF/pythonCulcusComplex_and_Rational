@@ -11,6 +11,9 @@ if user_choice == options[0]:  ## функция запрашивает у по�
     print(example_expression)
 elif user_choice == options[1]: ##  функция открывает пользователю лог. Не готово
     print('log')
+#     with open('log.cvs', 'r') as file:   
+#         for line in file:
+#             print(line)
 elif user_choice == options[2]: ## функция вывода на экран ссообщения и выход из программы
     view.exit()
     quit()
