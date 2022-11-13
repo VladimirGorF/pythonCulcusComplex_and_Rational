@@ -23,11 +23,11 @@ calcus_logger(resault)
 common_logger(data)
         
         
-# для вызова функции логирования используйте:       
+# для вызова функции логирования калькулятора используйте:       
 import logging
 logging.calcus_logger(resault)
 
-# для вызова функции логирования используйте:       
+# для вызова функции логирования общих данных используйте:       
 import logging
 logging.common_logger(data)
 
