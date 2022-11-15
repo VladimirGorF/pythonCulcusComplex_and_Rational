@@ -1,5 +1,6 @@
 import easygui
 import view
+import modul_complex
 
 msg = 'Выберите действие'
 title = 'Меню выбора дальнейшего действия'
@@ -7,16 +8,26 @@ options = ['Калькулятор', 'Получить лог', 'Выход из
 user_choice = easygui.buttonbox(msg, title, options)
 
 if user_choice == options[0]:  ## функция запрашивает у пользователя выражение для решения на калькуляторе, сразу убирает пробел и возвращает переменную как строку
-    example_expression = view.get_numeric_expression()
-    print(example_expression)
-elif user_choice == options[1]: ##  функция открывает пользователю лог. Не готово
+    expression = view.get_numeric_expression()
+    # Функция (в процессе написания кода) проверяет ввод выражения на ошибки и выбор типа калькулятора.
+    
+    # (if) При выборе калькулятора комплексных чисел:
+    result = modul_complex.complex(expression) # фукнкция производит расчет выражения в калькуляторе комплексных чисел
+    
+    # (if) При выборе калькулятора рациональных чисел:
+    # фукнкция (в процессе написания кода) производит расчет выражения в калькуляторе рациональных чисел
+    
+    view.show_result(expression, result) # функция выводит результат расчета калькулятора пользователю
+    
+elif user_choice == options[1]: ##  функция открывает пользователю лог. 
     print('log')
 #     with open('log.cvs', 'r') as file:   
 #         for line in file:
 #             print(line)
+
 elif user_choice == options[2]: ## функция вывода на экран ссообщения и выход из программы
     view.exit()
-    quit()
+    exit()
     
     
     
