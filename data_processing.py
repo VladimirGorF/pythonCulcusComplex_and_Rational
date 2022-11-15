@@ -16,5 +16,4 @@ def str_check(task):
             if task[i] in actions:
                 if not(task[i-1].isdigit and task[i+1].isdigit):
                     return False
-        else:
-            return True
+        return True
