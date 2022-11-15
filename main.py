@@ -28,6 +28,8 @@ while True:
     if a == '1':  # Вызов калькулятора
         view.get_value()
     elif a == '2':
+        continue
         # вызывает Логи
     elif a == '3':
+        continue
         # Выход
