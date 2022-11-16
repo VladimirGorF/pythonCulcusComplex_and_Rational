@@ -30,3 +30,9 @@ def show_general_log():
     with open('log.csv', 'r') as file:
         line = file.read()
     easygui.textbox(msg, title, line)
+    
+def show_expression_error():
+    user_expression = easygui.enterbox(msg="Выражение введено некорректно, введите верно", title='Калькулятор. Ввод выражения для вычисления')
+    expression = user_expression.split()
+    expression = ''.join(expression)
+    return expression
