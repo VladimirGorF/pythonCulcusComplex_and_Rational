@@ -16,3 +16,17 @@ def show_result(expression, result): # Выводит результат рас�
     msg = f'Результат выражения {ex} :\n\n{res}'
     title = 'Результат расчета калькулятора'
     easygui.msgbox(msg, title)
+    
+def show_calc_log():
+    msg = 'История расчетов калькулятора'
+    title = 'Лог калькулятора'
+    with open('log_calcus.csv', 'r') as file:
+        line = file.read()
+    easygui.textbox(msg, title, line)
+
+def show_general_log():
+    msg = 'Ваша история использования программы'
+    title = 'Общий лог программы'
+    with open('log.csv', 'r') as file:
+        line = file.read()
+    easygui.textbox(msg, title, line)
