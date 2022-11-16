@@ -24,11 +24,11 @@ while True:
         if check:  
             if 'j' in expression or 'i' in expression:
                 result = modul_complex.complex(expression)  # фукнкция производит расчет выражения в калькуляторе комплексных чисел
-                logging.calcus_logger(result)
+                logging.calcus_logger(result, expression)
                 view.show_result(expression, result)  # функция выводит результат расчета калькулятора пользователю
             else:
                 result = modul_rational.Calcus(expression)  # фукнкция производит расчет выражения в калькуляторе рациональных чисел
-                logging.calcus_logger(result)
+                logging.calcus_logger(result, expression)
                 view.show_result(expression, result)  # функция выводит результат расчета калькулятора пользователю
                 
     elif user_choice == options[1]:  ##  функция открывает пользователю лог.
