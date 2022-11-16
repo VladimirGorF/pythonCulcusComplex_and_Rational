@@ -3,8 +3,6 @@ import re
 s = '-1+3*5-(3-2)+(2*4)-4/2+1' 
 
 
-print(s)
-
 def Calcus(s):
     s = re.split('', s)  # разбираем все на элементы массива
     pos = []
@@ -101,4 +99,3 @@ def Calcus(s):
     return sum(pos) - sum(neg)  # возвращает результат вычислений
 
 
-print(Calcus(s))
