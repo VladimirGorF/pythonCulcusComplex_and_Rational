@@ -18,7 +18,10 @@ while True:
     if user_choice == options[0]:  ## функция запрашивает у пользователя выражение для решения на калькуляторе, сразу убирает пробел и возвращает переменную как строку
         expression = view.get_numeric_expression()
         check = data_processing.str_check(expression) # функция проводит проверку выражения пользователя на ошибки
-        if check:  # если введенное выражение прошло проверку программа выбирает калькулятор комплексных или рациональных чисел
+        while not check:
+            expression = view.show_expression_error()
+            check = data_processing.str_check(expression)
+        if check:  
             if 'j' in expression or 'i' in expression:
                 result = modul_complex.complex(expression)  # фукнкция производит расчет выражения в калькуляторе комплексных чисел
                 logging.calcus_logger(result)
@@ -28,9 +31,6 @@ while True:
                 logging.calcus_logger(result)
                 view.show_result(expression, result)  # функция выводит результат расчета калькулятора пользователю
                 
-        ## если выражение введено не правильно запускается функция ввода выражения до тех пор пока пользователь не введет без ошибок
-
-        
     elif user_choice == options[1]:  ##  функция открывает пользователю лог.
             view.show_calc_log()
 
