@@ -1,10 +1,17 @@
-# работает на вход корректно только по числам одноразрядным. Ответ любой величны выдает.
 import re
-s = '-1+3*5-(3-2)+(2*4)-4/2+1' 
 
 
 def Calcus(s):
     s = re.split('', s)  # разбираем все на элементы массива
+    i = 0
+    while i < len(s):
+        if s[i].isdigit() and s[i - 1].isdigit():
+            s[i - 1] = int(s[i - 1]) * 10 + int(s[i])
+            s[i - 1] = str(s[i - 1])
+            s.remove(s[i])
+            i -= 1
+        i += 1
+
     pos = []
     neg = []
     index_par = []
@@ -97,5 +104,6 @@ def Calcus(s):
 
 
     return sum(pos) - sum(neg)  # возвращает результат вычислений
+
 
 
