@@ -1,6 +1,5 @@
 import re
 
-
 def Calcus(s):
     s = re.split('', s)  # разбираем все на элементы массива
     i = 0
@@ -67,6 +66,7 @@ def Calcus(s):
     if len(index_par) < 2:
         index_par.insert(0, 0)
         index_par.insert(0, 0)
+    print(s)
 
     for i in range(len(index_par)):
         if i == 0:
@@ -76,15 +76,34 @@ def Calcus(s):
             if i % 2 == 0:
                 i_start = index_par[i - 1]
                 i_finish = index_par[i]
+
+
             for i in range(i_start, i_finish - 1):  # cначала идем по умножению и делению
                 if s[i] == '*':
-                    if s[i - 2] == '-':
-                        neg.append(int(s[i - 1]) * int(s[i + 1]))  # Убираем в отрицательный
+                    if s[i + 2] == '*' or s[i + 2] == '/':
+                        if s[i + 2] == '*':
+                            if s[i - 2] == '-':
+                                neg.append(int(s[i - 1]) * int(s[i + 1]) * int(s[i + 3]))  # Убираем в отрицательный
+                            else:
+                                pos.append(int(s[i - 1]) * int(s[i + 1]) * int(s[i + 3]))   # Добавляем в позитивные
+
+                        else:
+                            if s[i - 2] == '-':
+                                neg.append(int(s[i - 1]) * int(s[i + 1]) // int(s[i + 3]))  # Убираем в отрицательный
+                            else:
+                                pos.append(int(s[i - 1]) * int(s[i + 1]) // int(s[i + 3]))   # Добавляем в позитивные
+
                     else:
-                        pos.append(int(s[i - 1]) * int(s[i + 1]))  # Добавляем в позитивные
+                        if s[i - 2] != '*' and s[i - 2] != '/':
+                            if s[i - 2] == '-':
+                                neg.append(int(s[i - 1]) * int(s[i + 1]))  # Убираем в отрицательный
+                            else:
+                                pos.append(int(s[i - 1]) * int(s[i + 1]))  # Добавляем в позитивные
+
+
 
             for i in range(i_start, i_finish - 1):
-                if s[i] == '/':
+                if s[i] == '/' and s[i - 2] != '*' and s[i - 2] != '/':
                     if s[i - 2] == '-':
                         neg.append(int(s[i - 1]) // int(s[i + 1]))  # Убираем в отрицательные
                     else:
@@ -102,7 +121,8 @@ def Calcus(s):
                 else:
                     pos.append(int(s[i_finish - 1]))
 
-
+    print(pos)
+    print(neg)
     return sum(pos) - sum(neg)  # возвращает результат вычислений
 
 
