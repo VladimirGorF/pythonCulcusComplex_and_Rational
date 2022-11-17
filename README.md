@@ -28,9 +28,10 @@
 ## скриншоты работы: 
 ![Снимок экрана 2022-11-16 233616](https://user-images.githubusercontent.com/50580591/202229179-84bda429-f17e-41fd-9421-44c3ed649ab5.png)
 ![Снимок экрана 2022-11-16 233727](https://user-images.githubusercontent.com/50580591/202229255-02002a39-e1b9-4858-a143-c9d0a55f3696.png)
-<img width="2048" alt="Снимок экрана 2022-11-18 в 01 17 47" src="https://user-images.githubusercontent.com/110591063/202572485-2e769ebf-fda7-470a-9982-1e512d20f000.png">
-<img width="2048" alt="Снимок экрана 2022-11-18 в 01 17 30" src="https://user-images.githubusercontent.com/110591063/202572500-466d2d46-71ae-45c5-89b8-ecbc9e76d086.png">
 
+<img width="2048" alt="Снимок экрана 2022-11-18 в 01 23 01" src="https://user-images.githubusercontent.com/110591063/202572996-1c36dc3a-38c5-4253-b122-8a5af601e388.png">
+
+<img width="2048" alt="Снимок экрана 2022-11-18 в 01 23 58" src="https://user-images.githubusercontent.com/110591063/202573014-8469f41c-0da5-47be-af5a-8060e8b6f22f.png">
 
 
 ## Блок-схема функционирвания.<img width="2048" alt="Снимок экрана 2022-11-17 в 15 06 58" src="https://user-images.githubusercontent.com/110591063/202442033-bf0a5da6-69de-4196-96db-d53345931dc5.png">
