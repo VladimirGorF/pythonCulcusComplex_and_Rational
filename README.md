@@ -28,9 +28,7 @@
 ## скриншоты работы: 
 ![Снимок экрана 2022-11-16 233616](https://user-images.githubusercontent.com/50580591/202229179-84bda429-f17e-41fd-9421-44c3ed649ab5.png)
 ![Снимок экрана 2022-11-16 233727](https://user-images.githubusercontent.com/50580591/202229255-02002a39-e1b9-4858-a143-c9d0a55f3696.png)
-![Снимок экрана 2022-11-16 233818](https://user-images.githubusercontent.com/50580591/202229324-b8f872ad-6ac4-4c8b-aeb7-07f56b3e31e0.png)
-![Снимок экрана 2022-11-16 234033](https://user-images.githubusercontent.com/50580591/202229414-2eda1974-aea0-4bee-967c-7d2cdb51ba1e.png)
-![Снимок экрана 2022-11-16 235409](https://user-images.githubusercontent.com/50580591/202229442-12f73358-5a10-466f-b873-98563c13f67d.png)
+
 
 
 ## Блок-схема функционирвания.<img width="2048" alt="Снимок экрана 2022-11-17 в 15 06 58" src="https://user-images.githubusercontent.com/110591063/202442033-bf0a5da6-69de-4196-96db-d53345931dc5.png">
